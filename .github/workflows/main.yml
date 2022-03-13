@@ -65,7 +65,8 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-maven-
     
-    - uses: actions/download-artifact@master
+    - name: Download Artifact
+      uses: actions/download-artifact@master
       with:
         name: artifacts
     
