@@ -78,9 +78,9 @@ jobs:
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy 
          -Dmule.artifact=$artifactName 
-         -Danypoint.username=${{secret.USERNAME}}
-         -Danypoint.password=${{secret.PASSWORD}}
-         -Danypoint.platform.client_id=${{secret.ANYPOINT_PLATFORM_CLIENT_ID}}
-         -Danypoint.platform.client_secret=${{secret.ANYPOINT_PLATFORM_CLIENT_SECRET}}
+         -Danypoint.username=${{secrets.USERNAME}}
+         -Danypoint.password=${{secrets.PASSWORD}}
+         -Danypoint.platform.client_id=${{secrets.ANYPOINT_PLATFORM_CLIENT_ID}}
+         -Danypoint.platform.client_secret=${{secrets.ANYPOINT_PLATFORM_CLIENT_SECRET}}
          -DbusinessGroupId=407c60db-ce84-43c9-add9-64ce5a0fd61b
          -DskipTests
